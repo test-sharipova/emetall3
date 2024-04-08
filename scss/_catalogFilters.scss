@@ -4,6 +4,7 @@
 .table__filters {
     .wrapper_start {
         gap: 24px;
+        height: auto;
     }
     .providerscard__watched__subtitle {
         margin-top: 5px;
@@ -39,7 +40,7 @@
 }
 
 .filters__wrap {
-    max-height: 800px;
+    max-height: 1000px;
 }
 .filters-top-menu {
     display: none;
@@ -86,11 +87,40 @@
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-    transition: max-height .3s;
+    transition: max-height .1s;
     z-index: 10;
     max-width: 992px;
     &-show {
         max-height: 514px;
     }
     
+}
+.back {
+    &__links {
+        padding: 16px 16px 8px;
+        gap: 12px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 11px;
+        color: #6c757d;
+        line-height: normal;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        &:after {
+            content: '';
+            width: 5px;
+            height: 9px;
+            display: inline-block;
+            background: url(../img/gray-arrow.svg) no-repeat center/contain;
+            margin-top: 2px;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
 }

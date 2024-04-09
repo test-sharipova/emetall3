@@ -21,7 +21,7 @@
                 margin: 0 auto 16px;
             }
             .fs_20 {
-                margin-bottom: 2;
+                margin-bottom: 2px;
             }
            
         }
@@ -36,6 +36,14 @@
                 }
             }
         }
+        td.city {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding: 0;
+        }
+       
     }
 }
 

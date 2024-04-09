@@ -3,5 +3,94 @@
         &__title {
             padding-top: 0;
         }
+        &__table {
+            .table {
+                &__metallobaza {
+                    margin-top: 19px;
+                    padding-top: 18px !important;
+                    margin-bottom: 8px;
+                    .btn_gray {
+                        border: 1px solid #2764e0;
+                        border-radius: 6px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #2764e0;
+                        background-color: #fff;
+                    }
+                }
+            }
+            &__another-city {
+                margin-left: 0;
+               .fs_20 {
+                font-size: 16px;
+               }
+               .fs_14 {
+                font-weight: 400;
+                width: 100%;
+                
+               }
+            }
+            &__banner-city {
+                td {
+                    background-color: transparent !important;
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .table__filters {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 16px;
+        padding-top: 0;
+        .wrapper_start {
+            .fs_20 {
+                display: none;
+            }
+        }
+        .providerscard__watched__subtitle {
+            background: rgba(39, 100, 224, .2);
+            max-width: fit-content;
+            margin-top: 0;
+            padding: 2px 16px 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .showFilters {
+            width: calc(100% + 12px);
+            height: 70px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.12);
+            margin-top: 16px;
+            padding: 16px;
+            
+            line-height: normal;
+            .blue {
+                font-size: 14px;
+                line-height: normal;
+            }
+            .wrapper_center {
+                border: 1px solid #2764e0;
+                border-radius: 6px;
+                
+                height: 38px;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 16px;
+                }
+            }
+        }
+        .fs_12 {
+            color: #6c757d;
+            max-width: 80%;
+            align-self: flex-start;
+            margin-top: 16px;
+        }
     }
 }

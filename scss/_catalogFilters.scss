@@ -45,6 +45,12 @@
         }
        
     }
+    &__link {
+        margin-left: auto;
+        &-saved {
+            display: none;
+        }
+    }
 }
 
 .filters__wrap {
@@ -86,8 +92,10 @@
         }
         .catalogFilters__link {
             margin-left: auto;
+           
         }
     }
+    
     max-height: 48px;
     overflow: hidden;
     position: fixed;

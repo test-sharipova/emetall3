@@ -38,6 +38,13 @@
                     }
                 }
             }
+            td.city {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                padding: 0;
+            }
         }
         .form__wrapper {
             grid-template-columns: repeat(1, 1fr);
@@ -205,6 +212,10 @@
         }
     }
     //диаметр
+    .reset-diametr {
+        display: none;
+    }
+    
     .select__wrap_diametr.opened {
         position: fixed;
         top: 0;
@@ -216,21 +227,45 @@
         z-index: 11;
         .select {
             &__name {
-                padding: 19px 24px;
-                box-shadow: 0 1px 14px 0 rgba(47, 61, 84, 0.15);
-                text-align: center;
-                font-size: 16px;
-                font-weight: 600;
-                margin-bottom: 21px;
+               padding-left: 24px;
+               
+                &__wrap {
+                    padding: 19px 24px;
+                    box-shadow: 0 1px 14px 0 rgba(47, 61, 84, 0.15);
+                    min-height: 60px;
+                    margin-bottom: 21px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    .select__name-top {
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                    }
+                }
             }
             &__list {
                 &-wrap {
-                    top: 121px;
+                    top: 150px;
                     box-shadow: none;
                     border-radius: 0;
                 }
                 &-range {
                     padding: 18px 24px;
+                }
+                &-input--end {
+                    &:focus {
+                        border: 1px solid #2764E0;
+                        outline: none;
+                    }
+                }
+                &-input--start {
+                    &:focus {
+                        border: 1px solid #2764E0;
+                        outline: none;
+                    }
                 }
             }
             &__wrap {
@@ -265,6 +300,31 @@
                 right: 17px;
                 transform: translateY(-50%);
              }
+            &__help {
+                display: none;
+            }
+        }
+        .close-diametr {
+            width: 20px;
+            height: 18px;
+            background: url(https://test-sharipova.github.io/emetall/img/arrow_back.svg);
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .reset-diametr {
+            display: block;
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: normal;
+            color: #2764e0;
+            font-family: inherit;
         }
     }
+
 }

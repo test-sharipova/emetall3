@@ -2,12 +2,21 @@
     height: 56px;
 }
 .table__filters {
+    margin-bottom: 28px;
+    margin-top: 15px;
     .wrapper_start {
         gap: 24px;
         height: auto;
     }
     .providerscard__watched__subtitle {
         margin-top: 5px;
+        padding-left: 24px;
+        padding-right: 24px;
+        max-width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
     }
 }
 .catalogFilters {
@@ -36,13 +45,7 @@
                 }
             }
         }
-        td.city {
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            opacity: 0;
-            padding: 0;
-        }
+       
        
     }
     &__link {
@@ -50,6 +53,19 @@
         &-saved {
             display: none;
         }
+    }
+    .select__name__wrap {
+        display: none;
+    }
+    .btn {
+        width: 286px;
+    }
+    .catalogFilters__form {
+        
+        padding-bottom: 26px;
+    }
+    .form__wrapper_mb22 {
+        margin-bottom: 18px;
     }
 }
 
@@ -79,10 +95,21 @@
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            display: block;
+            
             height: 100%;
             padding: 2px 24px;
             transition: background-color .3s;
+            gap: 8px;
+            &::before {
+                content: '';
+                width: 13px;
+                height: 8px;
+                display: block;
+                background: url(../img/arrow-white-down.svg) no-repeat center/contain;
+                transform: rotate(180deg);
+                transition: all .1s;
+            }
+            
             &:hover {
                 background-color: #3473f4;
             }
@@ -106,37 +133,16 @@
     transition: max-height .1s;
     z-index: 10;
     max-width: 992px;
+    width: 992px;
     &-show {
         max-height: 514px;
-    }
-    
-}
-.back {
-    &__links {
-        padding: 16px 16px 8px;
-        gap: 12px;
-    }
-    &__link {
-        font-weight: 400;
-        font-size: 11px;
-        color: #6c757d;
-        line-height: normal;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        &:after {
-            content: '';
-            width: 5px;
-            height: 9px;
-            display: inline-block;
-            background: url(../img/gray-arrow.svg) no-repeat center/contain;
-            margin-top: 2px;
-        }
-        &:last-child {
-            &::after {
-                display: none;
+        .filters-top-menu {
+            .change-filters {
+                &::before {
+                    transform: rotate(0);
+                }
             }
         }
     }
+    
 }

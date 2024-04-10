@@ -1,0 +1,61 @@
+.header {
+    &__item {
+        &__profile {
+            text-align: left;
+            position: relative;
+            &__menu {
+                max-height: 0;
+                width: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: 10;
+                right: 0;
+                top: -6px;
+                box-shadow: 0 1px 20px 0 rgba(47, 61, 84, 0.25);
+                background: #fff;
+                border-radius: 12px;
+                
+                transition: max-height .3s;
+                &-active {
+                    padding: 14px 16px 16px;
+                    max-height: 700px;
+                    width: 280px;
+                }
+                button {
+                    cursor: pointer;
+                }
+                .profile__name {
+                    padding: 0;
+                    margin-bottom: 14px;
+                }
+                .profile {
+                    &__menu {
+                        &__link {
+                            width: 100%;
+                            padding: 6px 12px;
+                            &:hover {
+                                background: #f5f5f5;
+                                color: #2764e0;
+                                svg path {
+                                    fill: #2764e0;
+                                } 
+                            }
+                        }
+                    }
+                    &__name {
+                        .fs_14 {
+                            margin-top: 0;
+                            line-height: normal;
+                        }
+                    }
+                }
+                .header__profile {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 11px;
+                }
+            }
+        }
+        
+    }
+}

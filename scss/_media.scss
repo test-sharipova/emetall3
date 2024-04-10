@@ -148,6 +148,7 @@
         }
         .form__divider {
             margin-bottom: 7px;
+            width: 100%;
         }
         &__header.mobile {
             button {
@@ -157,12 +158,17 @@
                 transform: translateY(-44%);
             }
         }
+        .catalogFilters__form {
+            padding-bottom: 100px;
+        }
     }
     .table__filters {
         flex-direction: column;
         align-items: flex-start;
         padding-bottom: 16px;
-        padding-top: 0;
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 5px;
         .wrapper_start {
             .fs_20 {
                 display: none;

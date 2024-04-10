@@ -18,7 +18,18 @@ if ($(window).width() > 747) {
         $('.filter-top').toggleClass('filter-top-show');
         
     });
+    
 }
+//убрать скролл окна при открытии фильтров
+$('.showFilters').on('click', function(){
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+});
+//вернуть скролл
+$('.catalogFilters__close').on('click', function(){
+    document.body.style.position = '';
+    document.body.style.width = '';
+});
 //закрыть окно выбора диаметра
 $('.close-diametr').on('click', function(){
     $('.select__wrap_diametr').removeClass('opened');

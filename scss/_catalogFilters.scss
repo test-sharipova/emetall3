@@ -73,7 +73,55 @@
     max-height: 1000px;
 }
 .filters-top-menu {
-    display: none;
+    display: flex;
+    height: 48px;
+    align-items: center;
+    gap: 24px;
+    position: fixed;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    
+    z-index: 10;
+    max-width: 992px;
+    width: 992px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform .2s;
+    .change-filters {
+        background-color: #2764E0;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        height: 100%;
+        padding: 2px 24px;
+        transition: background-color .3s;
+        gap: 8px;
+        &::before {
+            content: '';
+            width: 13px;
+            height: 8px;
+            display: block;
+            background: url(../img/arrow-white-down.svg) no-repeat center/contain;
+            transform: rotate(180deg);
+            transition: all .1s;
+        }
+        
+        &:hover {
+            background-color: #3473f4;
+        }
+        &:active {
+            background-color: #104cc4;
+        }
+    }
+    .catalogFilters__link {
+        margin-left: auto;
+       
+    }
 }
 
 .filter-top {
@@ -82,46 +130,7 @@
         
     }
     
-    .filters-top-menu {
-        display: flex;
-        height: 48px;
-        align-items: center;
-        gap: 24px;
-        .change-filters {
-            background-color: #2764E0;
-            color: #fff;
-            font-size: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            
-            height: 100%;
-            padding: 2px 24px;
-            transition: background-color .3s;
-            gap: 8px;
-            &::before {
-                content: '';
-                width: 13px;
-                height: 8px;
-                display: block;
-                background: url(../img/arrow-white-down.svg) no-repeat center/contain;
-                transform: rotate(180deg);
-                transition: all .1s;
-            }
-            
-            &:hover {
-                background-color: #3473f4;
-            }
-            &:active {
-                background-color: #104cc4;
-            }
-        }
-        .catalogFilters__link {
-            margin-left: auto;
-           
-        }
-    }
+   
     
     max-height: 48px;
     overflow: hidden;

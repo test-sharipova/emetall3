@@ -44,7 +44,20 @@ $(document).mouseup( function(e){
                 $('.header__item__profile__menu').removeClass('header__item__profile__menu-active'); // скрываем его
 		}
 	});
-    
+
+//показать меню при клике на ... в карточке поставщика
+$('.btn_more').on('click', function(){
+    $('.providerscard-more__menu').toggleClass('providerscard-more__menu-active');
+
+});
+$(document).mouseup( function(e){ 
+		var div = $( ".providerscard-more__menu" ); 
+		if ( !div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+                $('.providerscard-more__menu').removeClass('providerscard-more__menu-active'); // скрываем его
+		}
+	});
+
 //закрыть окно выбора диаметра
 $('.close-diametr').on('click', function(){
     $('.select__wrap_diametr').removeClass('opened');

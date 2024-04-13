@@ -1,19 +1,23 @@
 .modal {
     &__subscribe-new {
-        display: block;
-
+        
+        max-width: 712px;
         padding: 48px 48px 60px;
         background-color: #fff;
         border-radius: 15px;
-        &__item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-            border-bottom: 1px solid #f2f2f4;
+        
+        p {
+            text-wrap: balance;
+        }
+        &__list {
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 0;
+                border-bottom: 1px solid #f2f2f4;
+            }
         }
     }
 }
-.overlay {
-    display: block;
-}
+

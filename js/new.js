@@ -62,3 +62,10 @@ $(document).mouseup( function(e){
 $('.close-diametr').on('click', function(){
     $('.select__wrap_diametr').removeClass('opened');
 });
+
+//подписаться на обновления
+$('.toggle-button').change(function() {
+    if($(this).is(':checked')) {
+        $('.modal__subscribe-new, .overlay').fadeIn();
+    }
+});

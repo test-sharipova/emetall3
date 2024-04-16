@@ -84,6 +84,9 @@ button {
         }
     }
 }
+.select__wrap.opened {
+    z-index: 11;
+}
 
 @import '_catalogFilters.scss';
 @import '_main.scss';

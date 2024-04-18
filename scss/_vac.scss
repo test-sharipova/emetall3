@@ -1,0 +1,115 @@
+.vac {
+    &-promo {
+        padding: 48px 0 32px;
+        &__content {
+            max-width: 408px;
+        }
+        &__wrapper {
+            padding: 75px 80px 81px;
+            background-color: #F1F5F8;
+            border-radius: 15px;
+            background-image: image-set(url(../img/vac-bg-2x.webp) type("image/webp"), url(../img/vac-bg.png) type("image/png") 1x, url(../img/vac-bg-2x.png) type("image/png") 2x);
+            background-size: contain;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+    }
+    &-about {
+        padding: 32px 0;
+    }
+    &-info {
+        padding: 32px 0;
+        summary {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-right: 32px;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                color: #2764e0;
+                &::after, &::before {
+                    background-color: #2764e0;
+                }
+                
+            }
+            &::after {
+                content: '';
+                width: 26px;
+                height: 2px;
+                display: block;
+                background-color: #212529;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before {
+                content: '';
+                height: 26px;
+                width: 2px;
+                display: block;
+                background-color: #212529;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 12px;
+                
+            }
+        }
+        details {
+            border-bottom: 1px solid #F2F2F4;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        details[open] {
+            border-bottom: none;
+            summary {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &__promo {
+            padding-bottom: 24px;
+            &__head {
+                border-radius: 10px;
+                background: #e9f0fc;
+                padding: 48px 48px 44px;
+                margin-bottom: 32px;
+                .wrapper_start {
+                    gap: 64px;
+                    .fs_16 {
+                        max-width: 260px;
+                    }
+                }
+            }
+            &__text {
+                max-width: 712px;
+                ul {
+                    list-style-type: none;
+                    
+                }
+            }
+            &__footer {
+                border: 1px solid #e9f0fc;
+                border-radius: 12px;
+                background: #e9f0fc;
+                max-width: 712px;
+                padding: 32px;
+            }
+        }
+        .btn_transparent {
+            width: 100%;
+            cursor: pointer;
+        }
+        &__wrap {
+            margin-bottom: 24px;
+        }
+    }
+}

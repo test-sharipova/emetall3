@@ -69,3 +69,22 @@ $('.toggle-button').change(function() {
         $('.modal__subscribe-new, .overlay').fadeIn();
     }
 });
+
+//вакансии - показать больше вакансий
+//спецпредложения - показать больше спецпредложений
+
+ 
+var visibleVacancies = 3;
+var allVacancies = $('.vac-info__vacancy').length;
+     
+$('.vac-info__vacancy').slice(visibleVacancies).hide();
+     
+$('.btn_show-more').on('click', function() {
+    visibleVacancies += 3;
+       
+if (visibleVacancies >= allVacancies) {
+ $('.btn_show-more').hide();
+}
+        
+$('.vac-info__vacancy').slice(0, visibleVacancies).show();
+});  

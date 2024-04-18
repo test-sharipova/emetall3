@@ -545,4 +545,23 @@
     .catalog {
         padding-top: 0;
     }
+    .offers {
+        
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        &__item {
+            &__bottom {
+                .wrapper {
+                    .mobile {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .spec__img__city {
+            left: auto;
+            right: 8px;
+        }
+    }
 }

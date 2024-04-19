@@ -71,9 +71,7 @@ $('.toggle-button').change(function() {
 });
 
 //вакансии - показать больше вакансий
-//спецпредложения - показать больше спецпредложений
 
- 
 var visibleVacancies = 3;
 var allVacancies = $('.vac-info__vacancy').length;
      
@@ -87,4 +85,26 @@ if (visibleVacancies >= allVacancies) {
 }
         
 $('.vac-info__vacancy').slice(0, visibleVacancies).show();
-});  
+});
+
+//фикс боди если открыта вакансия
+if ($(window).width() <= 768) {
+    var details = $('.vac-info__vacancy');
+
+  details.each(function() {
+    var detail = $(this);
+
+    if (detail.attr('open')) {
+      $('body').css('position', 'fixed');
+    }
+
+    detail.on('toggle', function() {
+      if (detail.attr('open')) {
+        $('body').css('position', 'fixed');
+      } else {
+        $('body').css('position', 'static');
+      }
+    });
+  });
+}
+

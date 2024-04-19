@@ -1,3 +1,12 @@
+@media screen and (max-width:1439px) {
+    .vac {
+        &-send {
+            &__form {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
 @media screen and (max-width:768px) {
     .catalogFilters {
         .select__help {
@@ -562,6 +571,182 @@
         .spec__img__city {
             left: auto;
             right: 8px;
+        }
+    }
+    .vac {
+        &-promo {
+            padding: 16px 0;
+            &__wrapper {
+                padding: 24px 24px 165px;
+                background-image: image-set(url(../img/vac-bg-mob.webp) type("image/webp"), url(../img/vac-bg-mob.png) type("image/png"));
+            }
+            .fs_28 {
+                font-size: 24px;
+            }
+            .fs_16 {
+                font-size: 14px;
+                line-height: 143%;
+            }
+        }
+        &-about {
+            padding: 16px 0;
+            .fs_28 {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            .companyAbout__item__img {
+                margin-bottom: 16px;
+            }
+        }
+        &-info {
+            padding: 35px 0 24px;
+            .fs_28 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+            summary {
+                font-size: 16px;
+                min-height: 53px;
+                
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    width: 8px;
+                    height: 16px;
+                    background: url(../img/vac-next.svg) no-repeat center/contain;
+                    right: 0;
+                    
+                }
+                &:hover {
+                    color: #212529;
+                    &::after, &::before {
+                        background-color: #fff;
+                    }
+                }
+            }
+            &__promo {
+                &__head {
+                    padding: 32px 21px 32px 24px;
+                    margin-bottom: 41px;
+                    .fs_24 {
+                        font-size: 16px;
+                        margin-bottom: 16px;
+                    }
+                    .wrapper_start {
+                        flex-direction: column;
+                        gap: 24px;
+                    }
+                    .fs_16 {
+                        font-size: 14px;
+                        line-height: 143%;
+                    }
+                    .btn {
+                        width: 100%;
+                    }
+                }
+                &__text {
+                    .fs_18 {
+                        font-size: 14px;
+                        line-height: 171%;
+                        &:first-of-type {
+                            line-height: 143%;
+                        }
+                    }
+                    li {
+                        margin-bottom: 24px;
+                    }
+                }
+                &__footer {
+                    margin-bottom: 32px;
+                    .fs_18 {
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+                .vac-send__wrapper {
+                    margin-top: 48px;
+                    gap: 0;
+                }
+            }
+            details[open] {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 3;
+                background-color: #fff;
+                summary {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background-color: #fff;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 1px 14px 0 rgba(47, 61, 84, 0.15);
+                    height: 60px;
+                    text-align: center;
+                    padding: 0;
+                    &::after {
+                        display: block;
+                        width: 20px;
+                        height: 18px;
+                        background: url(https://e-metall.ru/img/arrow_back.svg) no-repeat center/contain;
+                        left: 20px;
+                        right: auto;
+                    }
+                    .vac-name {
+                        display: none;
+                    }
+                    .vac-title {
+                        display: block;
+                    }
+                }
+                .vac-info__promo {
+                    position: fixed;
+                    height: calc(100vh - 60px);
+                    width: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    top: 60px;
+                    left: 0;
+                    z-index: 3;
+                    background-color: #fff;
+                    margin-top: 16px;
+                    padding: 0 16px 145px;
+                }
+            }
+            
+        }
+        &-send {
+            padding: 24px 0 60px;
+            &__wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 32px;
+                border-radius: 10px;
+                box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+                h2 {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+                .fs_18 {
+                    font-size: 14px;
+                    line-height: 143%;
+                    max-width: 75%;
+                }
+            }
+            &__form {
+                grid-template-columns: 1fr;
+                width: 100%;
+                margin-top: 20px;
+                .btn {
+                    height: 50px;
+                }
+            }
         }
     }
 }

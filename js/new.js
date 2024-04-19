@@ -64,7 +64,7 @@ $('.close-diametr').on('click', function(){
 });
 
 //подписаться на обновления
-$('.toggle-button').change(function() {
+$('.toggle-button-click').change(function() {
     if($(this).is(':checked')) {
         $('.modal__subscribe-new, .overlay').fadeIn();
     }

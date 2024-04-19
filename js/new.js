@@ -108,3 +108,7 @@ if ($(window).width() <= 768) {
   });
 }
 
+//модальное окно вакансии
+$('.apply-job').on('click', function() {
+    $('.modal__vacancies, .overlay').fadeIn();
+});

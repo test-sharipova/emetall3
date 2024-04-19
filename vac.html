@@ -3146,7 +3146,7 @@
                              <div class="wrapper_start">
                                  <p class="fs_16 lh_norm">Требуемый опыт работы: 1–3 года
                                      Полная занятость, полный день</p>
-                                 <button type="button" class="btn btn_44">Откликнуться на вакансию</button>
+                                 <button type="button" class="btn btn_44 apply-job">Откликнуться на вакансию</button>
                              </div>
                         </div>
                         <div class="vac-info__promo__text">
@@ -3228,7 +3228,7 @@
                              <div class="wrapper_start">
                                  <p class="fs_16 lh_norm">Требуемый опыт работы: 1–3 года
                                      Полная занятость, полный день</p>
-                                 <button type="button" class="btn btn_44">Откликнуться на вакансию</button>
+                                 <button type="button" class="btn btn_44 apply-job">Откликнуться на вакансию</button>
                              </div>
                         </div>
                         <div class="vac-info__promo__text">
@@ -3310,7 +3310,7 @@
                             <div class="wrapper_start">
                                 <p class="fs_16 lh_norm">Требуемый опыт работы: 1–3 года
                                     Полная занятость, полный день</p>
-                                <button type="button" class="btn btn_44">Откликнуться на вакансию</button>
+                                <button type="button" class="btn btn_44 apply-job">Откликнуться на вакансию</button>
                             </div>
                        </div>
                        <div class="vac-info__promo__text">
@@ -3363,7 +3363,7 @@
                              <div class="wrapper_start">
                                  <p class="fs_16 lh_norm">Требуемый опыт работы: 1–3 года
                                      Полная занятость, полный день</p>
-                                 <button type="button" class="btn btn_44">Откликнуться на вакансию</button>
+                                 <button type="button" class="btn btn_44 apply-job">Откликнуться на вакансию</button>
                              </div>
                         </div>
                         <div class="vac-info__promo__text">
@@ -3445,7 +3445,7 @@
                              <div class="wrapper_start">
                                  <p class="fs_16 lh_norm">Требуемый опыт работы: 1–3 года
                                      Полная занятость, полный день</p>
-                                 <button type="button" class="btn btn_44">Откликнуться на вакансию</button>
+                                 <button type="button" class="btn btn_44 apply-job">Откликнуться на вакансию</button>
                              </div>
                         </div>
                         <div class="vac-info__promo__text">
@@ -3704,6 +3704,36 @@
             </div>
         </div>
     </section>
+    <!-- modal -->
+    <div class="overlay"></div>
+    <!-- отправить резюме -->
+    <div class="modal modal__vacancies">
+        <button type="button" class="modal__close">&times;</button>
+        <div class="vac-send__content">
+            <h2 class="fs_36 lh_norm fw_600 mb_24">Хотите работать у нас?</h2>
+            <p class="fs_18 lh_139">Отправьте нам сообщение, или позвоните по номеру телефона <a href="+78003020940" class="textColor">8 800 30 20 940</a>
+            </p>
+        </div>
+        <form action="#" class="vac-send__form">
+            <label>
+                <p class="fs_14 lh_norm mb_8 fw_600">E-mail</p>
+                <input type="email" class="form__input" placeholder="Введите электронный адрес">
+            </label>
+            <label>
+                <p class="fs_14 lh_norm mb_8 fw_600">Телефон</p>
+                <input type="text" class="form__input phone" placeholder="Введите номер телефона">
+            </label>
+            <div class="input-file-row">
+                <label class="input-file">
+                    <input type="file" style="clip: rect(0,0,0,0);width: 0;height: 0; opacity: 0;position: absolute;">
+                    <p class="btn_order btn_44 btn_file"><span class="input-file__plus"></span><span>Прикрепить резюме</span></p>
+                </label>
+                <div class="input-file-list"></div>
+            </div>
+            
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
     
 <script src="js/jquery-3.6.3.min.js"></script>
 <script src="https://e-metall.ru/wp-content/themes/emetall/js/script.js?ver=1708003394" id="emetall-script-js"></script>

@@ -35,7 +35,7 @@ $('.catalogFilters__close').on('click', function(){
 //главная меню личного кабинета
 $('.header__item__profile').on('click', function(){
     $('.header__item__profile__menu').toggleClass('header__item__profile__menu-active');
-
+    
 });
 $(document).mouseup( function(e){ 
 		var div = $( ".header__item__profile" ); 

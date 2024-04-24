@@ -90,6 +90,24 @@ button {
 .lh_178 {
     line-height: 178%;
 }
+.header__profile-opened {
+    background: linear-gradient(#DD0858, #2764E0);
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    position: relative;
+   
+    display: flex;
+   
+    justify-content: center;
+   
+    align-items: center;
+    cursor: pointer;
+    img {
+        position: relative;
+        z-index: 2;
+    }
+}
 
 @import '_catalogFilters.scss';
 @import '_main.scss';

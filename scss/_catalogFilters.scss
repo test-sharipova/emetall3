@@ -77,6 +77,61 @@
     .form__wrapper_mb22 {
         margin-bottom: 18px;
     }
+    &__table {
+        overflow: visible;
+        td:has(.catalogFilters__warning) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        
+    }
+    &__warning {
+        &-icon {
+            width: 17px;
+            height: 16px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #DDDDDD;
+            mask: url(../img/providerscard-warning.svg) no-repeat center/contain;
+            transition: background-color .3s;
+            
+        }
+        &-text {
+            position: relative;
+            &::after {
+                content: 'Сообщить о несоответствии';
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.8);
+                
+                border-radius: 6px;
+                padding: 6px 12px;
+                
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: absolute;
+                right: -53px;
+                bottom: -28px;
+                display: none;
+                z-index: 3;
+            }
+        }
+        &:focus .catalogFilters__warning-text::after {
+            display: flex;
+        }
+        &:focus .catalogFilters__warning-icon {
+            background-color: #c3094f;
+        }
+        &:hover .catalogFilters__warning-text::after {
+            display: flex;
+        }
+        &:hover .catalogFilters__warning-icon {
+            background-color: #c3094f;
+        }
+    }
+    
     
 }
 
@@ -133,6 +188,7 @@
         margin-left: auto;
        
     }
+
 }
 
 .filter-top {

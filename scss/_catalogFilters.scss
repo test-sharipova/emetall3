@@ -114,17 +114,22 @@
                 position: absolute;
                 right: -53px;
                 bottom: -28px;
+                
+                opacity: 0;
                 display: none;
                 z-index: 3;
+                transition: opacity .2s, display .2s allow-discrete;
             }
         }
         &:focus .catalogFilters__warning-text::after {
+            opacity: 1;
             display: flex;
         }
         &:focus .catalogFilters__warning-icon {
             background-color: #c3094f;
         }
         &:hover .catalogFilters__warning-text::after {
+            opacity: 1;
             display: flex;
         }
         &:hover .catalogFilters__warning-icon {

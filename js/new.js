@@ -1,5 +1,5 @@
 //меняются стили фильтра при прокрутке
-if ($(window).width() > 747) {
+if ($(window).width() > 768) {
     $(window).scroll(function() {
     
         if ($(this).scrollTop() > 800) { 
@@ -57,11 +57,27 @@ $(document).mouseup( function(e){
                 $('.providerscard-more__menu').removeClass('providerscard-more__menu-active'); // скрываем его
 		}
 	});
+//показать фильтры селект
+if ($(window).width() < 768) {
+    $('.select-list').on('click', function(){
+        $('.select__name__wrap-razdel').css('display', 'flex');
+        
+    });
+}
 
-//закрыть окно выбора диаметра
-$('.close-diametr').on('click', function(){
-    $('.select__wrap_diametr').removeClass('opened');
+//закрыть окно выбора в фильтрах моб версии
+$('.close-select').on('click', function(){
+    $('.select__wrap').removeClass('opened');
+    $('.select__name__wrap-razdel').css('display', 'none');
 });
+
+//при клике на вариант добавить галочку
+$('.select__item-value').on('click', function(){
+    $(this).toggleClass('checked');
+});
+
+
+
 
 //подписаться на обновления
 $('.toggle-button-click').change(function() {

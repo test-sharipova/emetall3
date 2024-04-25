@@ -400,6 +400,7 @@
                     justify-content: center;
                     align-items: center;
                     position: relative;
+                    
                     .select__name-top {
                         text-align: center;
                         font-size: 16px;
@@ -413,6 +414,8 @@
                     top: 150px;
                     box-shadow: none;
                     border-radius: 0;
+                    max-height: calc(100% - 204px);
+                    height: calc(100% - 204px);
                 }
                 &-range {
                     padding: 18px 24px;
@@ -487,6 +490,9 @@
             color: #2764e0;
             font-family: inherit;
         }
+    }
+    .select__list {
+        max-height: 100%;
     }
     .new-select.on + .new-select__list {
         position: fixed;

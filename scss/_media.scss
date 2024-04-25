@@ -414,8 +414,13 @@
                     top: 150px;
                     box-shadow: none;
                     border-radius: 0;
-                    max-height: calc(100% - 204px);
-                    height: calc(100% - 204px);
+                    max-height: calc(100% - 254px);
+                    height: calc(100% - 254px);
+                    .btn {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin: 0;
+                    }
                 }
                 &-range {
                     padding: 18px 24px;
@@ -548,7 +553,11 @@
             font-family: inherit;
         }
     }
-
+    .select__wrap-single {
+        .select__item-value {
+            padding: 8px 40px 8px 12px;
+        }
+    }
     //подписка на обновления
     .modal {
         &__subscribe-new {

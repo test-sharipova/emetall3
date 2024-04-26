@@ -32,6 +32,10 @@ $('.catalogFilters__close').on('click', function(){
     document.body.style.position = '';
     document.body.style.width = '';
 });
+
+
+
+
 //главная меню личного кабинета
 $('.header__item__profile').on('click', function(){
     $('.header__item__profile__menu').toggleClass('header__item__profile__menu-active');
@@ -59,11 +63,7 @@ $(document).mouseup( function(e){
 	});
 //показать фильтры селект
 if ($(window).width() < 768) {
-    // $('.select-list').on('click', function(){
-    //     $('.select__name__wrap-razdel').css('display', 'flex');
-        
-    // });
-
+    
     $('.select-list').each(function(i) {
         $(this).on('click', function(e){
         $('.select__name__wrap-razdel').eq(i).css('display', 'flex');
@@ -73,6 +73,17 @@ if ($(window).width() < 768) {
         $('.select__name__wrap-razdel').css('display', 'none');
         console.log('ok');
     });
+    //фикс боди
+    $('.select-list').on('click', function(){
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+    });
+    //убрать фикс боди
+    $('.close-select-offers').on('click', function(){
+        document.body.style.position = '';
+        document.body.style.width = '';
+    });
+
 }
 
 //закрыть окно выбора в фильтрах моб версии

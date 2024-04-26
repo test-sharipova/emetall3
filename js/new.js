@@ -59,9 +59,19 @@ $(document).mouseup( function(e){
 	});
 //показать фильтры селект
 if ($(window).width() < 768) {
-    $('.select-list').on('click', function(){
-        $('.select__name__wrap-razdel').css('display', 'flex');
+    // $('.select-list').on('click', function(){
+    //     $('.select__name__wrap-razdel').css('display', 'flex');
         
+    // });
+
+    $('.select-list').each(function(i) {
+        $(this).on('click', function(e){
+        $('.select__name__wrap-razdel').eq(i).css('display', 'flex');
+        });
+    });
+    $('.close-select').on('click', function(){
+        $('.select__name__wrap-razdel').css('display', 'none');
+        console.log('ok');
     });
 }
 

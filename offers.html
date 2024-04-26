@@ -3120,7 +3120,9 @@
                     Акции поставщиков
                 </h1>
                 <div class="offers__filter mb_48">
-                    <div class="form__item_286 w151">
+
+                   <div>
+                    <div class="form__item_286 w151 select-list">
                         <label for="chapter" class="label">Раздел</label>
                         <select name="chapter" id="chapter" class="form__input select_main">
                         <option value="" selected disabled></option>
@@ -3164,39 +3166,64 @@
                         <option value="Шина">Шина</option>
                         <option value="Электроды">Электроды</option>
     
-                    </select>
-                    <p class="fs_12 gray2">Выберите раздел</p>
+                        </select>
+                        
+                        <p class="fs_12 gray2">Выберите раздел</p>
                     </div>
-                    <div class="form__item_286 w158">
-                        <label for="chapter2" class="label">Подраздел</label>
-                    <select name="chapter2" id="chapter2" class="form__input select_main">
-                              <option value="" selected disabled></option>
-                                <option value="Арматура">ППУ</option>
-                                <option value="Балка">Треугольная</option>
-                                <option value="Баллоны">Овальная</option>
-                                <option value="Дробь">Арочная</option>
-                                <option value="Заглушки">Плоскоовальная</option>
-                                <option value="Задвижки">Радиуснопрофильная</option>
-                                
-    
-                    </select>
-                    <p class="fs_12 gray2">Выберите подраздел</p>
+                    <div class="select__name__wrap select__name__wrap-razdel">
+                        <button class="close-select" type="button"></button>
+                        <span class="select__name-top">Раздел</span>
+                        <button type="button" class="reset-select">Сбросить</button>
                     </div>
-                    <div class="form__item_286 w100">
-                        <label for="city" class="label">Город</label>
-                    <select name="city" id="city" class="form__input select_main">
-                              <option value="" selected disabled></option>
-                                <option value="Санкт-Петербург">Санкт-Петербург</option>
-                                <option value="Москва">Москва</option>
-                                <option value="Город1">Город1</option>
-                                <option value="Город2">Город2</option>
-                                <option value="Город3">Город3</option>
-                                <option value="Город4">Город4</option>
-                                
-    
-                    </select>
-                    <p class="fs_12 gray2">Введите город</p>
+                   </div>
+                    
+                    <div>
+                        <div class="form__item_286 w158 select-list">
+                            <label for="chapter2" class="label">Подраздел</label>
+                            <select name="chapter2" id="chapter2" class="form__input select_main">
+                                    <option value="" selected disabled></option>
+                                        <option value="Арматура">ППУ</option>
+                                        <option value="Балка">Треугольная</option>
+                                        <option value="Баллоны">Овальная</option>
+                                        <option value="Дробь">Арочная</option>
+                                        <option value="Заглушки">Плоскоовальная</option>
+                                        <option value="Задвижки">Радиуснопрофильная</option>
+                                        
+            
+                            </select>
+                            
+                            <p class="fs_12 gray2">Выберите подраздел</p>
+                        </div>
+                        <div class="select__name__wrap select__name__wrap-razdel">
+                            <button class="close-select" type="button"></button>
+                            <span class="select__name-top">Подраздел</span>
+                            <button type="button" class="reset-select">Сбросить</button>
+                        </div>
                     </div>
+                    <div class="form__item_286">
+                        <div class="form__item_286 w100 select-list">
+                            <label for="city" class="label">Город</label>
+                            <select name="city" id="city" class="form__input select_main">
+                                    <option value="" selected disabled></option>
+                                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                        <option value="Москва">Москва</option>
+                                        <option value="Город1">Город1</option>
+                                        <option value="Город2">Город2</option>
+                                        <option value="Город3">Город3</option>
+                                        <option value="Город4">Город4</option>
+                                        
+            
+                            </select>
+                            <p class="fs_12 gray2">Введите город</p>
+                            
+                        </div>
+                        <div class="select__name__wrap select__name__wrap-razdel">
+                            <button class="close-select" type="button"></button>
+                            <span class="select__name-top">Город</span>
+                            <button type="button" class="reset-select">Сбросить</button>
+                        </div>
+                    </div>
+                    
                     <a href="#" class="btn">Показать 501 предложение</a>
                 </div>
                 <div class="offers__wrapper">

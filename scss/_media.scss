@@ -6,6 +6,11 @@
             }
         }
     }
+    .offers {
+        &__filter {
+            flex-wrap: wrap;
+        }
+    }
 }
 @media screen and (max-width:768px) {
     .catalogFilters {
@@ -527,7 +532,7 @@
         box-shadow: 0 1px 14px 0 rgba(47, 61, 84, 0.15);
         min-height: 60px;
         margin-bottom: 21px;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         position: fixed;
@@ -641,7 +646,9 @@
         padding-top: 0;
     }
     .offers {
-        
+        .form__item_286 {
+            width: 100%;
+        }
         &__wrapper {
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }

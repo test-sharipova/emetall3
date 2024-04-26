@@ -13,6 +13,9 @@
     }
 }
 @media screen and (max-width:768px) {
+    .search {
+        padding-top: 0;
+    }
     .catalogFilters {
         &__form {
             height: 100%;

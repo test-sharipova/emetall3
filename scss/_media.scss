@@ -78,6 +78,9 @@
             .gray2 {
                 display: none;
             }
+            .mt-9 {
+                margin-top: 0;
+            }
         }
         .form__wrapper.grid__wrapper {
             grid-template-columns: repeat(1, 1fr);
@@ -166,11 +169,12 @@
             border-radius: 12px;
             background: #fff;
             width: 100%;
-            margin-bottom: 8px;
+            
             .select__wrap {
                 margin-bottom: 0;
             }
         }
+       
         .form__divider {
             margin-bottom: 7px;
             width: 100%;

@@ -4093,7 +4093,12 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                 
             </div>
             <div class="filters__inner-wrap mobile">
-                
+                <div class="filters-top-menu">
+                    <a href="#filters" class="change-filters">Изменить фильтры</a>
+                    <p class="fs_15 gray lh_167">Труба профилильная 50х50х3, ст.0-20, 6м</p>
+                    <a href="#" class="blue fs_15 catalogFilters__link btn__signin"><img
+                        src="https://chel.e-metall.ru/img/search_blue.svg" alt="save search"> Сохранить поиск</a>
+                </div>
                 <form action="https://e-metall.ru/armatura/" class="catalogFilters__form desktop" id="catalogFilters__form">
                     <input type="hidden" name="category" value="armatura">
                     <input type="hidden" name="post_id" value="41">
@@ -4105,7 +4110,7 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                         <button type="button" class="fs_14 lh_norm blue">Сбросить</button>
                     </div>
                     <div class="wrapper form__wrapper catalogFilters__form__wrap">
-                        <div class="form__item_286 form__item_w47">
+                        <div class="form__item_286 form__item_w47 select-list">
                             <label for="chapter" class="label">Раздел</label>
                             <select name="chapter" id="chapter" class="form__input select select_main">
                                 <option value="" selected disabled></option>
@@ -4237,9 +4242,14 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                     Электроды</option>
                                 
                             </select>
+                            
                             <p class="fs_12 gray2">Выберите раздел</p>
                         </div>
-                       
+                        <div class="select__name__wrap select__name__wrap-razdel">
+                            <button class="close-select" type="button"></button>
+                            <span class="select__name-top">Раздел</span>
+                            <button type="button" class="reset-select">Сбросить</button>
+                        </div>
 
                         
 
@@ -4258,8 +4268,12 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
 
                         <div class="form__item_286 form__item_w47">
                         <div class="select__wrap  select__wrap-single">
-                            <span class="select__name desktop">Выберите город</span>
-                            <span class="select__name mobile" style="align-self: flex-start;">Город</span>
+                            <div class="select__name__wrap">
+                                <button class="close-select" type="button"></button>
+                                <span class="select__name-top">Город</span>
+                                <button type="button" class="reset-select">Сбросить</button>
+                            </div>
+                            <span class="select__name">Выберите город</span>
                             <input type="text" name="city"
                                 placeholder="Все города"
                                 value="" autocomplete="off"
@@ -5415,6 +5429,7 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                                                                     <span class="select__item-value ">Ясный</span>
                                                                                     <span class="select__item-value ">Яхрома</span>
                                                                         </div>
+                                                                        
                             </div>
                         </div>
                         </div>
@@ -5438,9 +5453,9 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
 
                         <div class="select__wrap select__wrap_diametr">
                             <div class="select__name__wrap">
-                                <button class="close-diametr" type="button"></button>
+                                <button class="close-select" type="button"></button>
                                 <span class="select__name-top">Диаметр</span>
-                                <button type="button" class="reset-diametr">Сбросить</button>
+                                <button type="button" class="reset-select">Сбросить</button>
                             </div>
                             <span class="select__name">Диаметр</span>
                             <input type="text" autocomplete="off" placeholder="Любой"
@@ -5508,6 +5523,7 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                                                                                                 <span class="select__item-value ">40</span>
                                     
                                 </div>
+                                <button type="button" class="btn btn_50">Применить</button>
                             </div>
                         </div>
 
@@ -5518,6 +5534,11 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                         
                                                                             
                         <div class="select__wrap ">
+                            <div class="select__name__wrap">
+                                <button class="close-select" type="button"></button>
+                                <span class="select__name-top">Класс</span>
+                                <button type="button" class="reset-select">Сбросить</button>
+                            </div>
                             <span class="select__name">Класс</span>
                             <input type="text" name="item_klass"
                                 placeholder="Любой"
@@ -5544,12 +5565,18 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                                                                                                 <span class="select__item-value ">В500С</span>
                                     
                                 </div>
+                                <button type="button" class="btn btn_50">Применить</button>
                             </div>
                         </div>
                      
                         
                                                                             
                         <div class="select__wrap ">
+                            <div class="select__name__wrap">
+                                <button class="close-select" type="button"></button>
+                                <span class="select__name-top">Марка</span>
+                                <button type="button" class="reset-select">Сбросить</button>
+                            </div>
                             <span class="select__name">Марка</span>
                             <input type="text" name="item_steel_mark"
                                 placeholder="Любая"
@@ -5574,6 +5601,7 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                                                                                                 <span class="select__item-value ">Г2С</span>
                                     
                                 </div>
+                                <button type="button" class="btn btn_50">Применить</button>
                             </div>
                         </div>
                      
@@ -5591,6 +5619,11 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
 
                     <div class="form__item_286 w100 metallobaza">
                         <div class="select__wrap  select__wrap-single">
+                            <div class="select__name__wrap">
+                                <button class="close-select" type="button"></button>
+                                <span class="select__name-top">Металлобаза</span>
+                                <button type="button" class="reset-select">Сбросить</button>
+                            </div>
                             <span class="select__name">Металлобаза</span>
                             <input type="text" name="item_company"
                                 placeholder="Любая"
@@ -5696,6 +5729,7 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                                                                     <span class="select__item-value ">Юнона-2 г.Чебоксары</span>
                                                                                     <span class="select__item-value ">ЮТПК г.Сургут</span>
                                                                         </div>
+                                                                        <button type="button" class="btn btn_50">Применить</button>
                             </div>
                         </div>
                         <button type="submit" class="btn mobile fw_600 btn_50">Показать предложения</button>
@@ -7533,8 +7567,12 @@ var IvorySearchVars = {"is_analytics_enabled":"1"};
 </script>
 <script src="https://e-metall.ru/wp-content/plugins/add-search-to-menu/public/js/ivory-search.min.js?ver=5.5.4" id="ivory-search-scripts-js"></script>
 <script>rcl_do_action("rcl_footer")</script>
+
 <script src="https://e-metall.ru/wp-content/themes/emetall/js/script.js?ver=1708003394" id="emetall-script-js"></script>
 <script src="https://e-metall.ru/wp-content/themes/emetall/js/app.js?ver=1711435100" id="emetall-appjs-js"></script>
+<script src="js/imask.js"></script>
+<script src="js/air-datepicker.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/new.js"></script>
 </body>
 </html>

@@ -144,9 +144,11 @@ if ($(window).width() <= 768) {
     });
   });
   //открыть окошко селекта
-//   $('.select__wrap').each(function(i) {
-
-//   })
+  $('.select-input-wrap').each(function(i) {
+    $(this).on('click', function(e){
+        $('.select__wrap').eq(i).addClass('opened');
+        });
+  });
 }
 
 //модальное окно вакансии

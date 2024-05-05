@@ -684,17 +684,41 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
         &__item {
+            min-height: auto;
+            padding-bottom: 16px;
+           
+            &_promo {
+                &::before {
+                    top: 21px;
+                    left: 20px;
+                }
+            }
+            .spec__img {
+                height: 160px;
+                margin-bottom: 0;
+            }
+            .fs_16 {
+                padding: 0 4px;
+            }
+            .wrapper {
+                padding: 4px 4px 0px 4px;
+            }
             &__bottom {
-                .wrapper {
-                    .mobile {
-                        width: 100%;
+                &__name {
+                    margin-top: -4px;
+                    flex-direction: column;
+                    padding: 8px 8px 0px 4px;
+                    .textColor {
+                        font-size: 14px;
                     }
                 }
             }
         }
-        .spec__img__city {
-            left: auto;
-            right: 8px;
+        
+        &__filter {
+            .btn {
+                margin-top: 0;
+            }
         }
     }
     .vac {

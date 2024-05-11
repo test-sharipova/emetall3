@@ -30,6 +30,12 @@
     }
 }
 .catalogFilters {
+    &__close {
+        width: 60px;
+        height: 60px;
+        background-size: 16px 16px;
+        left: 0;
+    }
     &__table {
         &__another-city {
             text-align: center;

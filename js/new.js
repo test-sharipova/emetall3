@@ -32,7 +32,19 @@ $('.catalogFilters__close').on('click', function(){
     document.body.style.position = '';
     document.body.style.width = '';
 });
-
+//убрать плавное появление фильтра (переписаны скрипты из script.js)
+$('.showFilters').on('click', function() {
+    $('.catalogFilters__form').fadeIn(0);
+    $('.catalogFilters__header').fadeIn(0);
+    $('.overlay').fadeIn();
+    $('.showFilters').fadeOut();
+  });
+  $('.catalogFilters__close').on('click', function() {
+    $('.catalogFilters__form').fadeOut(0);
+    $('.catalogFilters__header').fadeOut(0);
+    $('.overlay').fadeOut(0);
+    $('.showFilters').fadeIn(0);
+  });
 
 
 
@@ -61,6 +73,13 @@ $(document).mouseup( function(e){
                 $('.providerscard-more__menu').removeClass('providerscard-more__menu-active'); // скрываем его
 		}
 	});
+
+//показать кнопку вы подписаны в карточке поставщика
+$('#subscribe-provider').on('click', function(){
+    $(this).fadeOut(0);
+    $('#subscribe-provider-done').fadeIn();
+});
+
 //показать фильтры селект
 if ($(window).width() < 768) {
     

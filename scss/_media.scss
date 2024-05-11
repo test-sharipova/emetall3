@@ -154,7 +154,7 @@
                     width: 100%;
                 }
                 .catalogFilters__link {
-                    width: calc(100% - 32px);
+                    width: calc(100% - 48px);
                     border-radius: 6px;
                     height: 44px;
                     background: #fff;
@@ -215,17 +215,42 @@
             button {
                 position: absolute;
                 right: 16px;
-                top: 50%;
-                transform: translateY(-44%);
+                top: 2px;
+                
+                height: calc(100% - 2px);
             }
+        }
+        &__header {
+            box-shadow: 0 1px 3px 0 rgba(47, 61, 84, 0.15);
         }
         .catalogFilters__form {
             padding-bottom: 120px;
         }
-       
-        
+        .labelRadio {
+            transition: all 0s;
+        }
+        .catalogFilters__radio:checked+label {
+            background-color: #2764E0;
+            color: #fff;
+            transition: all 0s;
+            
+        }
+        .catalogFilters__radio:focus+label {
+            background-color: #2764E0;
+            color: #fff;
+        }
     }
     .catalog-img {
+        .catalogFilters__radio:checked+label {
+            background-color: #2764E0;
+            color: #fff;
+            transition: all 0s;
+            
+        }
+        .catalogFilters__radio:focus+label {
+            background-color: #2764E0;
+            color: #fff;
+        }
         .select__wrap-input {
             font-size: 14px;
         }
@@ -445,7 +470,7 @@
                
                 &__wrap {
                     padding: 19px 24px;
-                    box-shadow: 0 1px 14px 0 rgba(47, 61, 84, 0.15);
+                    box-shadow: 0 1px 3px 0 rgba(47, 61, 84, 0.15);
                     min-height: 60px;
                     margin-bottom: 21px;
                     display: flex;
@@ -468,6 +493,8 @@
                     border-radius: 0;
                     max-height: calc(100% - 254px);
                     height: calc(100% - 254px);
+                    transition: 0s;
+                    
                     .btn {
                         left: 50%;
                         transform: translateX(-50%);
@@ -527,11 +554,11 @@
             }
         }
         .close-select {
-            width: 20px;
-            height: 18px;
-            background: url(https://test-sharipova.github.io/emetall/img/arrow_back.svg);
+            width: 60px;
+            height: 60px;
+            background: url(https://test-sharipova.github.io/emetall/img/arrow_back.svg) no-repeat center/20px 18px;
             position: absolute;
-            left: 16px;
+            left: 0;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -546,6 +573,7 @@
             line-height: normal;
             color: #2764e0;
             font-family: inherit;
+            height: 100%;
         }
     }
     .select__list {
@@ -613,7 +641,14 @@
         .select__item-value {
             padding: 8px 40px 8px 12px;
         }
+        
+        &.opened {
+            .reset-select {
+                display: none;
+            }
+        }
     }
+    
     //подписка на обновления
     .modal {
         &__subscribe-new {

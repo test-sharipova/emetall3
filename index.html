@@ -4036,6 +4036,7 @@
                                 <label for="chapter" class="label">Раздел</label>
                                 <select name="chapter" id="chapter" class="form__input select select_main">
                                     <option value="" selected disabled></option>
+                                    
                                                                     <option value="/armatura/"
                                         selected>
                                         Арматура</option>
@@ -4178,14 +4179,19 @@
                        
                            
     <style>
-        .select__wrap-single .select__item-value.checked:before,
+        /* .select__wrap-single .select__item-value.checked:before,
         .select__wrap-single .clear__checked:before{
             display: none;
-        }
+        } */
         .select__wrap-single .select__item-value {
             padding: 8px 12px;
         }
-       
+        @media screen and (max-width:768px) {
+            .select__wrap-single .select__item-value {
+                padding: 17px 12px 18px;
+                border-bottom: 1px solid #F2F2F4;
+        }
+        }
         
         </style>
     
@@ -4208,8 +4214,8 @@
                                 </span>
                                 <div class="select__list-wrap">
                                     <div class="select__list">
-                                        <span class="select__item-value clear__checked">Все города</span>
-                                                                                                                            <span class="select__item-value ">Абаза</span>
+                                        <span class="select__item-value clear__checked checked">Все города</span>
+                                        <span class="select__item-value ">Абаза</span>
                                                                                         <span class="select__item-value ">Абакан</span>
                                                                                         <span class="select__item-value ">Абдулино</span>
                                                                                         <span class="select__item-value ">Абинск</span>
@@ -5413,9 +5419,9 @@
                                         </div>
                                     </div>
                                     <div class="select__list">
-                                        <span class="select__item-value clear__checked">Любой</span>
-                                                                                                                    <span class="select__item-value checked">д6</span>
-                                                                                                                    <span class="select__item-value ">L=11,7m</span>
+                                        <span class="select__item-value clear__checked checked">Любой</span>
+                                        <span class="select__item-value">д6</span>
+                                        <span class="select__item-value ">L=11,7m</span>
                                                                                                                     <span class="select__item-value ">4</span>
                                                                                                                     <span class="select__item-value ">5</span>
                                                                                                                     <span class="select__item-value ">6</span>
@@ -5573,7 +5579,7 @@
                                 </span>
                                 <div class="select__list-wrap">
                                     <div class="select__list">
-                                        <span class="select__item-value clear__checked">Любая</span>
+                                        <span class="select__item-value clear__checked checked">Любая</span>
                            
                                                                                         <span class="select__item-value ">Абсолют-Пермь г.Пермь</span>
                                                                                         <span class="select__item-value ">Айрон г.Москва</span>

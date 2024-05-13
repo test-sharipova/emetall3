@@ -234,6 +234,7 @@
             transition: all 0s;
             border: 1px solid #ddd;
             outline: none;
+            flex-grow: 1;
             &::after {
                 outline: 1px solid #2764E0;
             }
@@ -290,6 +291,9 @@
         }
     }
     .catalog-img {
+        .labelRadio {
+            flex-grow: 1;
+        }
         .catalogFilters__radio:checked+label {
             background-color: #2764E0;
             color: #fff;

@@ -90,7 +90,7 @@ if ($(window).width() < 768) {
     });
     $('.close-select').on('click', function(){
         $('.select__name__wrap-razdel').css('display', 'none');
-        console.log('ok');
+        
     });
     //фикс боди
     $('.select-list').on('click', function(){
@@ -120,8 +120,29 @@ $(".select__wrap-single").on("click", ".select__item-value", function() {
     $(".select__item-value").removeClass("checked");
     $(this).addClass("checked");
 });
-
-
+//добавить галочку в списке раздела
+window.onload = function() { 
+    $('.new-select__item').each(function() {
+        $(this).removeClass('checked');
+        if ($(this).find('span').text() == $('.new-select').text()) {
+          $(this).addClass('checked');
+        }
+      });
+    $('.new-select').on('click', function(){
+        $('.new-select__item').each(function() {
+            $(this).removeClass('checked');
+            if ($(this).find('span').text() == $('.new-select').text()) {
+              $(this).addClass('checked');
+            }
+            $(this).on('click', function(){
+                $('.select__name__wrap').css('display', 'none');
+                console.log('ok');
+            });
+          });
+    });
+    
+      
+  };
 
 //подписаться на обновления
 $('.toggle-button-click').change(function() {

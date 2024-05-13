@@ -115,7 +115,11 @@ $('.close-select').on('click', function(){
 $('.select__item-value').on('click', function(){
     $(this).toggleClass('checked');
 });
-
+//при клике на вариант убрать галочку у остальных (для города и металлобазы)
+$(".select__wrap-single").on("click", ".select__item-value", function() {
+    $(".select__item-value").removeClass("checked");
+    $(this).addClass("checked");
+});
 
 
 

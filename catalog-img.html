@@ -100,6 +100,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='emetall-style-min-css' href='https://e-metall.ru/wp-content/themes/emetall/css/style.min.css?ver=1707279480' media='all' />
 <link rel='stylesheet' id='emetall-app-css' href='https://e-metall.ru/wp-content/themes/emetall/css/app.css?ver=1709273460' media='all' />
 <link rel='stylesheet' id='yasrcsslightscheme-css' href='https://e-metall.ru/wp-content/plugins/yet-another-stars-rating/includes/css/yasr-table-light.css?ver=2.9.8' media='all' />
+
 <!-- <script src="https://e-metall.ru/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script src="https://e-metall.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script> -->
 <script id="rcl-core-scripts-js-extra">
@@ -4242,7 +4243,13 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                     Электроды</option>
                                 
                             </select>
-                            
+                            <div class="select-input-selected-wrap-razdel">
+                                <span class="fs_14 lh_norm fw_600">Выбрано:</span>
+                                <input type="text" 
+                                value="Все разделы" autocomplete="off"
+                                class="select-input-selected-razdel"
+                                readonly>
+                            </div>
                             <p class="fs_12 gray2">Выберите раздел</p>
                         </div>
                         <div class="select__name__wrap select__name__wrap-razdel">
@@ -4281,7 +4288,13 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                 
                                 class="select__wrap-input">
                             </div>
-                                
+                            <div class="select-input-selected-wrap">
+                                <span class="fs_14 lh_norm fw_600">Выбрано:</span>
+                                <input type="text" 
+                                value="Все города" autocomplete="off"
+                                class="select-input-selected"
+                                readonly>
+                            </div>
                             <span class="select__help">
                                 Начните вводить город
                             </span>
@@ -5640,6 +5653,13 @@ var Rcl = {"ajaxurl":"https:\/\/e-metall.ru\/wp-admin\/admin-ajax.php","wpurl":"
                                 placeholder="Любая"
                                 value="" autocomplete="off"
                                 class="select__wrap-input">
+                            </div>
+                            <div class="select-input-selected-wrap">
+                                <span class="fs_14 lh_norm fw_600">Выбрано:</span>
+                                <input type="text" 
+                                value="Все металлобазы" autocomplete="off"
+                                class="select-input-selected"
+                                readonly>
                             </div>
                             <span class="select__help">
                             Введите название металлобазы

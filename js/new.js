@@ -111,15 +111,14 @@ $('.close-select').on('click', function(){
     $('.select__name__wrap-razdel').css('display', 'none');
 });
 
-//при клике на вариант добавить галочку
-$('.select__item-value').on('click', function(){
-    $(this).toggleClass('checked');
+//при клике на вариант поместить его в поле "Выбрано:"
+$('.select__wrap-single').each(function(i){
+    $(this).find('.select__item-value').on('click', function(){
+        
+        $('.select-input-selected').eq(i).val($(this).text());
+    });
 });
-//при клике на вариант убрать галочку у остальных (для города и металлобазы)
-$(".select__wrap-single").on("click", ".select__item-value", function() {
-    $(".select__item-value").removeClass("checked");
-    $(this).addClass("checked");
-});
+
 //добавить галочку в списке раздела
 window.onload = function() { 
     $('.new-select__item').each(function() {
@@ -140,7 +139,37 @@ window.onload = function() {
             });
           });
     });
-    
+
+
+    //показать блок Выбрано в выборе раздела
+    if ($(window).width() <= 768) {
+         // Выбираем элемент, который будем отслеживать
+    var target = document.querySelector('.new-select');
+
+    // Функция, которая будет вызываться при изменении класса
+    var callback = function(mutationsList, observer) {
+        // Проверяем, есть ли класс on у элемента .new-select
+        if ($(target).hasClass('on')) {
+            $('.select-input-selected-wrap-razdel').show();
+        } else {
+            $('.select-input-selected-wrap-razdel').hide();
+        }
+    };
+
+    // Создаем новый экземпляр MutationObserver
+    var observer = new MutationObserver(callback);
+
+    // Настраиваем экземпляр для отслеживания изменений атрибута class
+    observer.observe(target, { attributes: true, attributeFilter: ['class'] });
+
+
+    //вставить название раздела в поле Выбрано:
+    $('.new-select').on('click', function(){
+        $('.select-input-selected-razdel').val($(this).text().trim());
+        
+    });
+    }
+   
       
   };
 

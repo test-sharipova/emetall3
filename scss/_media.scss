@@ -15,12 +15,15 @@
 @media screen and (max-width:768px) {
     .select__wrap-input {
         font-size: 14px;
+        
     }
+    
     .search {
         padding-top: 0;
     }
     .select-input-wrap {
         position: relative;
+        
             &::before {
                 position: absolute;
                 width: 100%;
@@ -33,6 +36,7 @@
             }
             .select__wrap-input {
                 font-size: 14px;
+                font-family: inherit;
             }
        }
     .opened {
@@ -264,7 +268,7 @@
                     position: absolute;
                     top: 50%;
                     background: #2764e0;
-                    right: 12px;
+                    right: 8px;
                     text-align: center;
                     line-height: 155%;
                     transform: translateY(-50%);
@@ -277,7 +281,7 @@
         }
         .new-select.on + .new-select__list {
             position: fixed;
-            top: 60px;
+            top: 150px;
             left: 0;
             width: 100%;
             z-index: 10;
@@ -287,7 +291,8 @@
             z-index: 11;
             border-radius: 0;
             padding-bottom: 20px;
-            padding-top: 34px;
+            padding-top: 0;
+            box-shadow: none;
         }
     }
     .catalog-img {
@@ -455,7 +460,7 @@
                     position: absolute;
                     top: 50%;
                     background: #2764e0;
-                    right: 12px;
+                    right: 8px;
                     text-align: center;
                     line-height: 155%;
                     transform: translateY(-50%);
@@ -468,7 +473,7 @@
         }
         .new-select.on + .new-select__list {
             position: fixed;
-            top: 60px;
+            top: 150px;
             left: 0;
             width: 100%;
             z-index: 10;
@@ -478,7 +483,8 @@
             z-index: 11;
             border-radius: 0;
             padding-bottom: 20px;
-            padding-top: 34px;
+            padding-top: 0;
+            box-shadow: none;
         }
     }
     .table__filters {
@@ -555,6 +561,23 @@
             padding-right: 24px;
             input {
                 width: 100%;
+            }
+        }
+        .select-input-wrap:has(.select__wrap-input[name="city"]), .select-input-wrap:has(.select__wrap-input[name="item_company"]){
+            position: relative;
+            &::before {
+                content: '';
+                width: 13px;
+                height: 14px;
+                display: block;
+                background: url(https://e-metall.ru/img/catalog/search_img.svg) no-repeat center/contain;
+                opacity: .6;
+                top: 50%;
+                left: 40px;
+                transform: translateY(calc(-50% - 6px));
+            }
+            .select__wrap-input {
+                padding-left: 40px;
             }
         }
         .select {
@@ -707,20 +730,20 @@
         width: 100%;
         z-index: 12;
         background-color: #fff;
-        &::after {
-            content: 'Выбрано:';
-            position: absolute;
-            bottom: -48px;
-            left: 0;
-            font-weight: 600;
-            font-size: 14px;
-            font-family: inherit;
-            color: #212529;
-            background: #fff;
-            display: block;
-            width: 85%;
-            padding: 13px 24px 6px;
-        }
+        // &::after {
+        //     content: 'Выбрано:';
+        //     position: absolute;
+        //     bottom: -48px;
+        //     left: 0;
+        //     font-weight: 600;
+        //     font-size: 14px;
+        //     font-family: inherit;
+        //     color: #212529;
+        //     background: #fff;
+        //     display: block;
+        //     width: 85%;
+        //     padding: 13px 24px 6px;
+        // }
         .select__name-top {
             text-align: center;
             font-size: 16px;
@@ -749,8 +772,71 @@
             font-family: inherit;
         }
     }
+    .select-input-selected-razdel {
+        font-family: inherit;
+        min-height: 36px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        transition: .4s;
+        color: var(--text-1, #212529);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        
+        line-height: normal;
+        position: relative;
+        
+        width: calc(100% - 40px);
+        border: none;
+        &:focus, &:focus-visible {
+            outline: none;
+        }
+}
+    .select-input-selected-wrap-razdel {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        
+        width: 100%;
+        z-index: 10;
+        display: none;
+        display: block;
+                padding: 20px 24px 12px;
+                
+                border-bottom: 1px solid #f2f2f4;
+              
+                &::before {
+                    content: "";
+                    background-color: #2764e0;
+                    top: 50%;
+                    transform: translateY(calc(-50% + 16px));
+                    right: 24px;
+                    position: absolute;
+                  
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    
+                }
+                &:after {
+                    content: url('data:image/svg+xml, <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.2955 5.47787C0.20213 5.38904 0.127789 5.28216 0.0769916 5.16371C0.0261941 5.04527 0 4.91774 0 4.78887C0 4.65999 0.0261941 4.53246 0.0769916 4.41402C0.127789 4.29558 0.20213 4.1887 0.2955 4.09987L0.2625 4.13087C0.456752 3.94695 0.714296 3.84479 0.9818 3.84553C1.2493 3.84628 1.50628 3.94987 1.6995 4.13487L4.5795 6.90487L11.4645 0.282867C11.6584 0.100969 11.9143 -0.000185533 12.1802 2.5547e-07C12.4461 0.000186044 12.7019 0.101699 12.8955 0.283867L12.8625 0.252867C12.9565 0.341869 13.0313 0.44916 13.0823 0.568143C13.1333 0.687125 13.1594 0.815282 13.159 0.944731C13.1587 1.07418 13.1318 1.20218 13.0801 1.32087C13.0284 1.43955 12.953 1.54641 12.8585 1.63487L5.3005 8.90287C5.10609 9.08583 4.84945 9.18813 4.58249 9.18905C4.31552 9.18998 4.05817 9.08948 3.8625 8.90787L0.2955 5.47787Z" fill="white" /></svg>');
+                    position: absolute;
+                    top: 50%;
+                    right: 28px;
+                   
+                    transform: translateY(calc(-50% + 16px));
+                }
+    }
     .select__wrap-single {
-      
+        .select-input-selected-wrap {
+            display: none;
+           
+        }
         &.opened {
             .reset-select {
                 display: none;
@@ -767,21 +853,62 @@
                 padding-top: 3px;
                 margin-bottom: 15px;
                 z-index: 5;
-                &::after {
-                    content: "Выбрано:";
+                
+            }
+            .select-input-selected-wrap {
+                display: block;
+                padding: 20px 24px 0;
+                position: relative;
+                border-bottom: 1px solid #f2f2f4;
+                .fs_14 {
                     position: absolute;
-                    bottom: -40px;
-                    left: 24px;
-                    font-weight: 600;
-                    font-size: 14px;
-                    font-family: inherit;
-                    color: #212529;
-                    background: #fff;
-                    display: block;
-                    width: 100%;
-                    padding-top: 13px;
-                    padding-bottom: 6px;
+                    top: 0;
                 }
+                &::before {
+                    content: "";
+                    background-color: #2764e0;
+                    top: 50%;
+                    transform: translateY(calc(-50% + 10px));
+                    right: 24px;
+                    position: absolute;
+                  
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    
+                }
+                &:after {
+                    content: url('data:image/svg+xml, <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.2955 5.47787C0.20213 5.38904 0.127789 5.28216 0.0769916 5.16371C0.0261941 5.04527 0 4.91774 0 4.78887C0 4.65999 0.0261941 4.53246 0.0769916 4.41402C0.127789 4.29558 0.20213 4.1887 0.2955 4.09987L0.2625 4.13087C0.456752 3.94695 0.714296 3.84479 0.9818 3.84553C1.2493 3.84628 1.50628 3.94987 1.6995 4.13487L4.5795 6.90487L11.4645 0.282867C11.6584 0.100969 11.9143 -0.000185533 12.1802 2.5547e-07C12.4461 0.000186044 12.7019 0.101699 12.8955 0.283867L12.8625 0.252867C12.9565 0.341869 13.0313 0.44916 13.0823 0.568143C13.1333 0.687125 13.1594 0.815282 13.159 0.944731C13.1587 1.07418 13.1318 1.20218 13.0801 1.32087C13.0284 1.43955 12.953 1.54641 12.8585 1.63487L5.3005 8.90287C5.10609 9.08583 4.84945 9.18813 4.58249 9.18905C4.31552 9.18998 4.05817 9.08948 3.8625 8.90787L0.2955 5.47787Z" fill="white" /></svg>');
+                    position: absolute;
+                    top: 50%;
+                    right: 28px;
+                   
+                    transform: translateY(calc(-50% + 10px));
+                }
+            }
+            .select-input-selected {
+                    font-family: inherit;
+                    min-height: 36px;
+                    flex-shrink: 0;
+                    border-radius: 5px;
+                    transition: .4s;
+                    color: var(--text-1, #212529);
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    line-height: normal;
+                    position: relative;
+                    
+                    width: calc(100% - 40px);
+                    border: none;
+                    &:focus, &:focus-visible {
+                        outline: none;
+                    }
             }
         }
     }

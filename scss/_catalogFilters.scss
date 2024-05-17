@@ -143,7 +143,12 @@
         }
     }
     
-    
+    .select-input-selected-wrap {
+        display: none;
+        &-razdel {
+            display: none;
+        }
+    }
 }
 
 .filters__wrap {

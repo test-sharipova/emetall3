@@ -168,6 +168,21 @@ window.onload = function() {
         $('.select-input-selected-razdel').val($(this).text().trim());
         
     });
+
+    //Показать сообщение об удалении диапазона, если введены значения диапазона
+    $('.select__list-input--start, .select__list-input--end').on('input', function() {
+        if ($(this).val().trim() !== '') {
+            $('.help-message').show();
+            $('.oft-search-message').hide(0);
+        } else {
+            $('.help-message').hide();
+            $('.oft-search-message').show(0);
+        }
+    });
+    $('.clear__range').on('click', function(){
+        $('.help-message').hide();
+            $('.oft-search-message').show(0);
+    });
     }
    
       

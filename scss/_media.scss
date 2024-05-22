@@ -556,6 +556,9 @@
         background: #fff;
         height: 100%;
         z-index: 11;
+        .help-message {
+            display: none;
+        }
         .select-input-wrap {
             padding-left: 24px;
             padding-right: 24px;
@@ -650,6 +653,7 @@
                 border-bottom: 1px solid #F2F2F4;
                 transition: 0s;
                 padding-right: 40px;
+                padding-left: 12px;
             }
             &__item-value::before {
                 content: '';
@@ -804,7 +808,7 @@
         width: 100%;
         z-index: 10;
         display: none;
-        display: block;
+        display: none;
                 padding: 20px 24px 12px;
                 
                 border-bottom: 1px solid #f2f2f4;

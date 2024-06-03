@@ -5477,7 +5477,7 @@
                                         
                                     </div>
                                     <div class="mobile">
-                                        <button type="button" class="btn btn_50">Применить</button>
+                                        <button type="button" class="btn btn_50 close-select-btn">Применить</button>
                                     </div>
                                 </div>
                             </div>
@@ -5527,7 +5527,7 @@
                                         
                                     </div>
                                     <div class="mobile">
-                                        <button type="button" class="btn btn_50">Применить</button>
+                                        <button type="button" class="btn btn_50 close-select-btn">Применить</button>
                                     </div>
                                 </div>
                             </div>
@@ -5571,7 +5571,7 @@
                                         
                                     </div>
                                     <div class="mobile">
-                                        <button type="button" class="btn btn_50">Применить</button>
+                                        <button type="button" class="btn btn_50 close-select-btn">Применить</button>
                                     </div>
                                 </div>
                             </div>
@@ -5710,7 +5710,7 @@
                                                                                         <span class="select__item-value ">ЮТПК г.Сургут</span>
                                                                             </div>
                                                                             <div class="mobile">
-                                                                                <button type="button" class="btn btn_50">Применить</button>
+                                                                                <button type="button" class="btn btn_50 close-select-btn">Применить</button>
                                                                             </div>
                                 </div>
                             </div>
@@ -8818,14 +8818,14 @@
               params = urlQueryString + '&' + newParam;
           }
       }
-      window.history.replaceState({}, "", baseUrl + params);
+      // window.history.replaceState({}, "", baseUrl + params);
     };
     
     
         $("body").on("click",".select__wrap:not(.select__wrap-single) .select__item-value", function(e){
     
     
-            window.history.replaceState({}, "", "https://e-metall.ru/armatura/");
+           // window.history.replaceState({}, "", "https://e-metall.ru/armatura/");
         $(".grid__wrapper .select__wrap").each(function() {
             var inputItem = $(this).find(".select__wrap-input");
             var clearName = $(this).find(".clear__checked").text();

@@ -88,7 +88,7 @@ if ($(window).width() < 768) {
         $('.select__name__wrap-razdel').eq(i).css('display', 'flex');
         });
     });
-    $('.close-select').on('click', function(){
+    $('.close-select, .close-select-btn').on('click', function(){
         $('.select__name__wrap-razdel').css('display', 'none');
         
     });
@@ -106,7 +106,7 @@ if ($(window).width() < 768) {
 }
 
 //закрыть окно выбора в фильтрах моб версии
-$('.close-select').on('click', function(){
+$('.close-select, .close-select-btn').on('click', function(){
     $('.select__wrap').removeClass('opened');
     $('.select__name__wrap-razdel').css('display', 'none');
 });

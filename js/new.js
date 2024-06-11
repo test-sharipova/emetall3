@@ -243,3 +243,8 @@ if ($(window).width() <= 768) {
 $('.apply-job').on('click', function() {
     $('.modal__vacancies, .overlay').fadeIn();
 });
+
+//сообщить о несоответсвии
+$('.catalogFilters__warning').on('click', function(){
+    $('.overlay, .modal__problem').fadeIn();
+});

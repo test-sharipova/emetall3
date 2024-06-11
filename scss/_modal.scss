@@ -30,4 +30,39 @@
         }
     }
 }
-
+.modal {
+    &__problem {
+        .modal__close {
+            top: 20px;
+            right: 20px;
+            width: 24px;
+            height: 24px;
+            display: block;
+            background: url(https://e-metall.ru/wp-content/themes/emetall/img/modal-close-gray.svg) no-repeat center/16px 16px;
+        }
+        .new-select {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            line-height: 100%;
+            &__list {
+                padding-top: 16px;
+            }
+            &__item {
+                margin-bottom: 4px;
+            }
+        }
+        
+        max-width: 607px;
+        border-radius: 15px;
+        display: block;
+        padding: 48px 64px;
+        background-color: #fff;
+        .btn {
+            width: 100%;
+            margin-top: 32px;
+        }
+    }
+}

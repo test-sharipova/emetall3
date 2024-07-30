@@ -2,7 +2,7 @@
 if ($(window).width() > 768) {
     $(window).scroll(function() {
     
-        if ($(this).scrollTop() > 800) { 
+        if ($(this).scrollTop() > 720) { 
             $('.filters-top-menu').css('transform', 'translateY(0)');
         } else {
             $('.filters-top-menu').css('transform', 'translateY(-60px)');

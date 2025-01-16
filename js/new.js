@@ -104,7 +104,7 @@ if ($(window).width() < 768) {
     });
 
 }
-
+ 
 //закрыть окно выбора в фильтрах моб версии
 $('.close-select, .close-select-btn').on('click', function(){
     $('.select__wrap').removeClass('opened');

@@ -59,21 +59,7 @@
             padding-top: 0;
         }
         &__table {
-            .table {
-                &__metallobaza {
-                    margin-top: 19px;
-                    padding-top: 18px !important;
-                    margin-bottom: 8px;
-                    .btn_gray {
-                        border: 1px solid #2764e0;
-                        border-radius: 6px;
-                        font-weight: 400;
-                        font-size: 14px;
-                        color: #2764e0;
-                        background-color: #fff;
-                    }
-                }
-            }
+           
             &__another-city {
                 margin-left: 0;
                .fs_20 {
@@ -509,32 +495,7 @@
             align-items: center;
             gap: 8px;
         }
-        .showFilters {
-            width: calc(100% + 12px);
-            height: 70px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.12);
-            margin-top: 16px;
-            padding: 16px;
-            
-            line-height: normal;
-            .blue {
-                font-size: 14px;
-                line-height: normal;
-            }
-            .wrapper_center {
-                border: 1px solid #2764e0;
-                border-radius: 6px;
-                
-                height: 38px;
-                position: relative;
-                img {
-                    position: absolute;
-                    left: 16px;
-                }
-            }
-        }
+       
         .fs_12 {
             color: #6c757d;
             max-width: 80%;

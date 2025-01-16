@@ -81,7 +81,7 @@
         padding-bottom: 26px;
     }
     .form__wrapper_mb22 {
-        margin-bottom: 18px;
+        margin-bottom: 14px;
     }
     &__table {
         overflow: visible;
@@ -381,6 +381,7 @@ button, input, optgroup, select, textarea {
   }
   
   //фильтры
+  
   .catalogFilters__form {
     
     padding: 32px 30px 29px 36px;
@@ -404,7 +405,7 @@ button, input, optgroup, select, textarea {
     }
   }
   .catalogFilters .form__wrapper.grid__wrapper {
-    gap: 28px;
+    gap: 20px;
     .select__wrap {
       max-width: 210px;
     }

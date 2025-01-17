@@ -750,17 +750,22 @@ button, input, optgroup, select, textarea {
       margin-bottom: 8px;
       padding: 6px 12px;
       line-height: normal;
+      
       .green {
         color: #04c900;
       }
     }
     .wrapper_start {
-      justify-content: space-between;
+      justify-content: flex-start;
+      p:nth-child(1) {
+        width: 138px;
+    }
     }
     table {
       td, th {
         font-size: 12px;
         font-weight: 400!important;
+        white-space: normal;
       }
       margin: 0 12px;
       

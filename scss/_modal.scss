@@ -65,4 +65,90 @@
             margin-top: 32px;
         }
     }
+    &__share {
+        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.12);
+        background: #fff;
+        padding: 48px 60px 60px;
+        border-radius: 15px;
+        min-width: 716px;
+        .modal__close {
+            background: url(../img/modal-close-gray.svg) no-repeat center/16px 16px;
+            width: 26px;
+            height: 26px;
+            top: 20px;
+            right: 20px;
+          }
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            color: #212529;
+            margin-bottom: 24px;
+            max-width: 90%;
+            line-height: normal;
+        }
+        &__info {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            border-radius: 12px;
+            background: #f2f2f4;
+            padding: 12px 24px;
+            gap: 4px;
+            margin-bottom: 30px;
+            a {
+                color: #2764e0;
+                text-decoration: none; 
+            }
+            &__item:nth-child(even) {
+                text-align: right;
+            }
+            .gray {
+                color: #6c757d;
+            }
+        }
+        &__soc {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 48px;
+            padding-left: 10px;
+            &__link {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 167%;
+                color: #212529;
+                text-decoration: none;
+                &::before {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    display: block;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                &_whatsapp {
+                    &::before {
+                        background-image: url(../img/whatsapp.svg);
+                    }
+                    
+                }
+                &_telegram {
+                    &::before {
+                        background-image: url(../img/telegram.svg);
+                    }
+                    
+                }
+                &_copy-link {
+                    &::before {
+                        background-image: url(../img/copy-link.svg);
+                    }
+                   
+                }
+            }
+        }
+    }
 }
+

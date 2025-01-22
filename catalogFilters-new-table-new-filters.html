@@ -8356,14 +8356,12 @@
                                                 <span class="providerscard-more__menu__title">Действия</span>
                                                 <button type="button" class="providerscard-more__menu__close"></button>
                                             </div>
-                                            <a href="" class="providerscard-more__item providerscard-more__item-rew">
-                                                <p class="fs_14 lh_norm">Оставить отзыв</p>
-                                            </a>
+                                            
                                             <a href="" class="providerscard-more__item providerscard-more__item-send">
                                                 <p class="fs_14 lh_norm">Поделиться</p>
                                             </a>
-                                            <a href="" class="providerscard-more__item providerscard-more__item-price">
-                                                <p class="fs_14 lh_norm">Запросить прайс-лист</p>
+                                            <a href="" class="providerscard-more__item providerscard-more__item-rekw">
+                                                <p class="fs_14 lh_norm">Скачать прайс-лист</p>
                                             </a>
                                             <a href="" class="providerscard-more__item providerscard-more__item-rekw">
                                                 <p class="fs_14 lh_norm">Скачать реквизиты</p>
@@ -15394,8 +15392,8 @@
             }
 
             .table__note table {
-                display: flex;
-                grid-template-columns: 50% 50%;
+                
+                grid-template-columns: 35% 65%;
             }
 
             .table__note tr td:first-child::before {
@@ -15994,7 +15992,7 @@
         </form>
     </div>
 
-    <!-- разместить заявка на металл -->
+    <!-- разместить заявку на металл -->
     <div class="modal modal__applications__order modal-place-order">
         <button type="button" class="modal__close"></button>
         <div class="wrapper">
@@ -16097,6 +16095,29 @@
             <button type="submit" class="btn">Отправить</button>
         </form>
     </div>
+
+    <!-- При клике на "Поделиться" -->
+     <div class="modal modal__share" style="display:block">
+        
+        <button type="button" class="modal__close"></button>
+            <p class="modal__share__title">
+                Отправьте информацию о&nbsp;предложении коллегам
+            </p>
+            <div class="modal__share__info">
+
+                <div class="modal__share__info__item fs_16 lh_156">Труба профилильная 50х50х3, ст.0-20, 6м<p class="fs_12 lh_norm">Предложение от <a href="#">Металлоторг</a></p></div>
+                <div class="modal__share__info__item fs_16 lh_156"><span class="gray">36.58 т в наличии</span><p class="fs_16 lh_156 fw_600">53 400 руб/т</p></div>
+                
+                
+                
+            </div>
+            <div class="modal__share__soc">
+                <a href="#" class="modal__share__soc__link modal__share__soc__link_whatsapp">WhatsApp</a>
+                <a href="#" class="modal__share__soc__link modal__share__soc__link_telegram">Telegram</a>
+                <a href="#" class="modal__share__soc__link modal__share__soc__link_copy-link">Скопировать ссылку</a>
+            </div>
+
+     </div>
 
 
     <!-- <div id="rcl-overlay"></div>

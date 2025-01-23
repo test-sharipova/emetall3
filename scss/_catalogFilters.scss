@@ -497,6 +497,10 @@ main:has(.catalogFilters) {
   .tdvalue {
     margin-top: 1px;
   }
+  .providerscard-more__item {
+    cursor: pointer;
+    width: 100%;
+  }
 } 
 .table__note {
   .wrapper_start {
@@ -1424,6 +1428,7 @@ main:has(.catalogFilters) .breadcrumbs {
           }
           
         }
+        
     .table__metallobaza:hover {
       .mobile {
         display: block;

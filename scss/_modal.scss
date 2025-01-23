@@ -71,6 +71,7 @@
         padding: 48px 60px 60px;
         border-radius: 15px;
         min-width: 716px;
+        z-index: 111;
         .modal__close {
             background: url(../img/modal-close-gray.svg) no-repeat center/16px 16px;
             width: 26px;
@@ -147,6 +148,31 @@
                     }
                    
                 }
+            }
+        }
+        .link-copied {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            color: #fff;
+            border-radius: 15px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            height: 57px;
+            padding: 6px 20px;
+            background-color: rgba(0,0,0, .8);
+            position: absolute;
+            width: 100%;
+            top: -65px;
+            left: 0;
+            &::before {
+                content: '';
+                display: block;
+                width: 13px;
+                height: 9px;
+                background: url(../img/link-copied.svg) no-repeat center/contain;
             }
         }
     }

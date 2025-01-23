@@ -248,3 +248,28 @@ $('.apply-job').on('click', function() {
 $('.catalogFilters__warning').on('click', function(){
     $('.overlay, .modal__problem').fadeIn();
 });
+
+//показать попап "Поделиться"
+$('.providerscard-more__item-send').on('click', function() {
+    $('.modal__share, .overlay').fadeIn();
+});
+
+//показать сообщение ссылка скопирована
+$('.modal__share__soc__link_copy-link').on('click', function(event) {
+    event.preventDefault(); // Предотвращаем переход по ссылке
+
+    const link = $(this).attr('href'); // Получаем ссылку из атрибута href
+    navigator.clipboard.writeText(link).then(() => {
+        // Отображаем сообщение об успешном копировании
+       
+        $('.link-copied').css({
+            'display':'flex'
+          });
+        // Скрываем сообщение через 2 секунды
+        setTimeout(() => {
+            $('.link-copied').hide();
+        }, 2000);
+    }).catch(err => {
+        console.error('Ошибка при копировании: ', err);
+    });
+});

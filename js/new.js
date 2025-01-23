@@ -273,3 +273,10 @@ $('.modal__share__soc__link_copy-link').on('click', function(event) {
         console.error('Ошибка при копировании: ', err);
     });
 });
+
+//проверить ячейку на переполнение, если переполнена - показать полное содержимое при наведении
+document.querySelectorAll('.tdvalue').forEach(function(box) {
+    if (box.scrollWidth > box.clientWidth) {
+        box.classList.add('tdvalue-standart');
+    }
+});

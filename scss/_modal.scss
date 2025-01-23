@@ -116,11 +116,12 @@
                 display: flex;
                 gap: 16px;
                 align-items: center;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 15px;
                 line-height: 167%;
                 color: #212529;
                 text-decoration: none;
+                transition: color .3s;
                 &::before {
                     content: '';
                     width: 24px;
@@ -147,6 +148,9 @@
                         background-image: url(../img/copy-link.svg);
                     }
                    
+                }
+                &:hover {
+                    color: #C3094F;
                 }
             }
         }
